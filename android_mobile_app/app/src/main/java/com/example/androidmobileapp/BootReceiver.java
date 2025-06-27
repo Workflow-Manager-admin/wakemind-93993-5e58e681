@@ -30,8 +30,8 @@ public class BootReceiver extends BroadcastReceiver {
             
             if (alarmsEnabled) {
                 // Reschedule both alarms
-                scheduleAlarm(context, 5, 45);
-                scheduleAlarm(context, 6, 0);
+                scheduleAlarm(context, 0, 0);
+                scheduleAlarm(context, 0, 15);
             }
         }
     }

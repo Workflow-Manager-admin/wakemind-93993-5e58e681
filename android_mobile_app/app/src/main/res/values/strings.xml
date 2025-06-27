@@ -7,8 +7,8 @@
     <string name="next_alarm">Next alarm: %s</string>
     <string name="alarms_active">Daily alarms are active</string>
     <string name="alarms_inactive">Daily alarms are inactive</string>
-    <string name="alarm_time_1">5:45 AM</string>
-    <string name="alarm_time_2">6:00 AM</string>
+    <string name="alarm_time_1">12:00 AM</string>
+    <string name="alarm_time_2">12:15 AM</string>
     
     <!-- Challenge screen -->
     <string name="solve_challenge">Solve this challenge to dismiss alarm</string>

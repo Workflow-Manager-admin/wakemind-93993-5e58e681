@@ -4,7 +4,7 @@ A minimal Android alarm app that wakes users up by making them solve simple math
 
 ## Features
 
-- **Fixed Daily Alarms**: Automatically schedules alarms at 5:45 AM and 6:00 AM every day
+- **Fixed Daily Alarms**: Automatically schedules alarms at 12:00 AM and 12:15 AM every day
 - **Challenge-Based Dismissal**: Users must solve a random challenge to dismiss the alarm
 - **Silent Mode Override**: Alarms ring even when the device is in silent mode
 - **Optional Vibration**: Supports vibration alongside alarm sound
@@ -16,7 +16,7 @@ A minimal Android alarm app that wakes users up by making them solve simple math
 ## How to Use
 
 1. **Start Alarms**: Tap the "Start Daily Alarms" button on the main screen
-2. **Daily Wake-Up**: The app will ring at 5:45 AM and 6:00 AM each day
+2. **Daily Wake-Up**: The app will ring at 12:00 AM and 12:15 AM each day
 3. **Solve Challenge**: When the alarm rings, solve the displayed challenge:
    - **Math Challenge**: Select the correct answer from three options
    - **Pattern Challenge**: Tap the pattern sequence in the correct order

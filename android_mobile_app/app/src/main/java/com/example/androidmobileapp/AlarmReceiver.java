@@ -44,12 +44,12 @@ public class AlarmReceiver extends BroadcastReceiver {
         int currentMinute = now.get(Calendar.MINUTE);
         
         // Determine which alarm triggered and reschedule it
-        if ((currentHour == 5 && currentMinute == 45) || 
-            (currentHour == 5 && currentMinute >= 45 && currentMinute < 60)) {
-            scheduleAlarmForTomorrow(context, 5, 45);
-        } else if ((currentHour == 6 && currentMinute == 0) || 
-                   (currentHour == 6 && currentMinute >= 0 && currentMinute < 15)) {
-            scheduleAlarmForTomorrow(context, 6, 0);
+        if ((currentHour == 0 && currentMinute == 0) || 
+            (currentHour == 0 && currentMinute >= 0 && currentMinute < 15)) {
+            scheduleAlarmForTomorrow(context, 0, 0);
+        } else if ((currentHour == 0 && currentMinute == 15) || 
+                   (currentHour == 0 && currentMinute >= 15 && currentMinute < 30)) {
+            scheduleAlarmForTomorrow(context, 0, 15);
         }
     }
     

@@ -106,16 +106,16 @@ public class MainActivity extends AppCompatActivity {
      * Start daily alarms
      */
     private void startAlarms() {
-        scheduleAlarm(5, 45); // 5:45 AM
-        scheduleAlarm(6, 0);  // 6:00 AM
+        scheduleAlarm(0, 0);  // 12:00 AM
+        scheduleAlarm(0, 15); // 12:15 AM
     }
 
     /**
      * Stop daily alarms
      */
     private void stopAlarms() {
-        cancelAlarm(5, 45);
-        cancelAlarm(6, 0);
+        cancelAlarm(0, 0);
+        cancelAlarm(0, 15);
     }
 
     /**
@@ -181,29 +181,29 @@ public class MainActivity extends AppCompatActivity {
      */
     private void showNextAlarm() {
         Calendar now = Calendar.getInstance();
-        Calendar next545 = Calendar.getInstance();
-        Calendar next600 = Calendar.getInstance();
+        Calendar next1200 = Calendar.getInstance();
+        Calendar next1215 = Calendar.getInstance();
         
-        // Set to 5:45 AM
-        next545.set(Calendar.HOUR_OF_DAY, 5);
-        next545.set(Calendar.MINUTE, 45);
-        next545.set(Calendar.SECOND, 0);
+        // Set to 12:00 AM
+        next1200.set(Calendar.HOUR_OF_DAY, 0);
+        next1200.set(Calendar.MINUTE, 0);
+        next1200.set(Calendar.SECOND, 0);
         
-        // Set to 6:00 AM
-        next600.set(Calendar.HOUR_OF_DAY, 6);
-        next600.set(Calendar.MINUTE, 0);
-        next600.set(Calendar.SECOND, 0);
+        // Set to 12:15 AM
+        next1215.set(Calendar.HOUR_OF_DAY, 0);
+        next1215.set(Calendar.MINUTE, 15);
+        next1215.set(Calendar.SECOND, 0);
         
         // If times have passed today, set for tomorrow
-        if (next545.getTimeInMillis() <= now.getTimeInMillis()) {
-            next545.add(Calendar.DAY_OF_MONTH, 1);
+        if (next1200.getTimeInMillis() <= now.getTimeInMillis()) {
+            next1200.add(Calendar.DAY_OF_MONTH, 1);
         }
-        if (next600.getTimeInMillis() <= now.getTimeInMillis()) {
-            next600.add(Calendar.DAY_OF_MONTH, 1);
+        if (next1215.getTimeInMillis() <= now.getTimeInMillis()) {
+            next1215.add(Calendar.DAY_OF_MONTH, 1);
         }
         
         // Find the next alarm
-        Calendar nextAlarm = next545.getTimeInMillis() < next600.getTimeInMillis() ? next545 : next600;
+        Calendar nextAlarm = next1200.getTimeInMillis() < next1215.getTimeInMillis() ? next1200 : next1215;
         
         SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, h:mm a", Locale.getDefault());
         String nextAlarmTime = sdf.format(nextAlarm.getTime());
