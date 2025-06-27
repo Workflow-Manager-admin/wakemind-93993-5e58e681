@@ -1,0 +1,19 @@
+<resources>
+    <!-- Primary colors -->
+    <color name="primary_green">#28672b</color>
+    <color name="primary_blue">#1565C0</color>
+    <color name="accent_yellow">#FFC107</color>
+    
+    <!-- Dark theme colors -->
+    <color name="background_dark">#121212</color>
+    <color name="surface_dark">#1e1e1e</color>
+    <color name="text_primary_dark">#ffffff</color>
+    <color name="text_secondary_dark">#b3b3b3</color>
+    
+    <!-- Status colors -->
+    <color name="success_green">#4CAF50</color>
+    <color name="error_red">#F44336</color>
+    
+    <!-- Transparent overlay -->
+    <color name="overlay_dark">#80000000</color>
+</resources>
